@@ -1,83 +1,79 @@
-# 📷 Smart Visitor Notification System
+# 📷 スマート来客通知システム
 
-A smart visitor notification system developed using Raspberry Pi 5, Python, OpenCV, and Flask.
+## 概要
 
-When the system detects a doorbell sound, it automatically captures a photo of the visitor, sends the image via Gmail, and starts a 10-second live video stream. The project was developed to improve home security and allow users to check visitors remotely.
+Raspberry Pi 5、Python、OpenCV、Flaskを用いて開発した来客通知システムです。
 
----
-
-## 📖 Overview
-
-Many people experience situations such as:
-
-- Being unable to identify visitors while away from home.
-- Feeling concerned about security when living alone.
-- Wanting to know who rang the doorbell before opening the door.
-
-This project addresses these issues by automatically notifying the user whenever a visitor is detected.
+インターホン音を検知すると、自動で来客の写真を撮影し、画像付きメールを送信するとともに、10秒間のライブ映像を配信します。外出先や家の別の部屋からでも来客の状況を確認できることを目的として制作しました。
 
 ---
 
-## ✨ Features
+## 背景
 
-- 🔊 Doorbell sound detection
-- 📷 Automatic image capture
-- ✉️ Email notification with attached photo
-- 🌐 10-second live video streaming using Flask
-- ⚡ Parallel processing using Python threads
+このシステムは、以下のような課題を解決することを目的としています。
 
----
-
-## 🛠 Technologies
-
-- Python
-- OpenCV
-- Flask
-- Raspberry Pi 5
-- NumPy
-- Gmail SMTP
+* 一人暮らしや高齢者の防犯対策
+* 外出中でも来客を確認したい
+* インターホンだけでは訪問者が分からない
 
 ---
 
-## ⚙️ System Flow
+## 主な機能
+
+* 🔊 インターホン音の検知
+* 📷 来客の自動撮影
+* ✉️ 画像付きメール通知
+* 🌐 Flaskによる10秒間のライブ映像配信
+* ⚡ スレッドを利用した並列処理
+
+---
+
+## 使用技術
+
+* Python
+* OpenCV
+* Flask
+* Raspberry Pi 5
+* NumPy
+* Gmail SMTP
+
+---
+
+## システムの流れ
 
 ```
-Visitor
-   │
-   ▼
-Doorbell Sound Detection
-   │
-   ▼
-Capture Image
-   │
-   ├──► Send Email
-   │
-   └──► Start Live Video Stream (10 seconds)
+来客
+ │
+ ▼
+インターホン音を検知
+ │
+ ▼
+写真を撮影
+ │
+ ├──► Gmailへ画像付きメール送信
+ │
+ └──► 10秒間ライブ映像を配信
 ```
 
 ---
 
-## 📸 Project Demo
+## 実行結果
 
-The presentation slides included in this repository explain:
+実際に来客を検知すると、来客の写真を撮影し、画像付きメールを送信するとともに、ブラウザから10秒間ライブ映像を確認できます。
 
-- Project background
-- System configuration
-- Program implementation
-- Execution results
-- Future improvements
+実行結果やシステム構成、プログラムの説明については、リポジトリ内の「スマート来客システム.pdf」にまとめています。
 
 ---
 
-## 💡 Future Improvements
+## 今後の改善点
 
-- AI-based doorbell sound recognition
-- Smartphone push notifications
-- Cloud storage for captured images
-- Visitor face recognition
+* AIによるチャイム音識別
+* スマートフォンへのプッシュ通知
+* 撮影画像のクラウド保存
+* 顔認識機能の追加
 
 ---
 
-## 👩‍💻 Author
+## 制作者
 
-Developed as a university project.
+大学の授業で制作したIoTシステムです。
